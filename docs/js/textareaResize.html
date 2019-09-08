@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		h2 { text-align: center; }
+		p { color: #666; width: 400px; margin: 20px auto 10px;}
+		textarea, .textarea {
+			border: 1px solid #ddd; 
+			border-radius: 3px;
+			padding: 0;
+			font-size: 18px;
+			line-height: 1.2;
+			outline-style: none;
+		}
+		textarea {
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			resize: none;
+			width: 100%;
+		}
+		.wrap {
+			position: relative;
+			font-size: 18px;
+		}
+		pre {
+			display: block;
+			visibility: hidden;
+			margin: 0;
+		}
+
+		.textarea {
+			min-height: 1em;
+		}
+		.wrap, .textarea {
+			margin: 10px auto;
+			width: 400px;
+		}
+	</style>
+</head>
+<body>
+	<h2>textarea高度自适应</h2>
+	<p>textarea：</p>
+	<div class="wrap">
+		<pre><span></span><br></pre>
+		<textarea name="" id="" ></textarea>
+	</div>
+	<p>div模拟：</p>
+	<div class="textarea" contenteditable="true"></div>
+</body>
+<script>
+	window.onload = function () {
+		document.querySelector('textarea').oninput = function () {
+			document.querySelector('pre span').innerHTML = this.value;
+		}
+	}
+</script>
+</html>
