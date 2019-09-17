@@ -1,4 +1,6 @@
-### 应用
+# AngularJs
+
+## 应用
 
 AngularJS **模块（Module）** 定义了 AngularJS 应用。
 
@@ -14,7 +16,7 @@ app.controller('myCtrl', function($scope) {
 });
 ```
 
-### 自定义指令
+## 自定义指令
 
 可以使用 **directive** 函数来添加自定义的指令。
 
@@ -57,7 +59,7 @@ restrict 值可以是以下几种:
 
 restrict 默认值为 `EA`, 即可以通过元素名和属性名来调用指令。
 
-### ng-model
+## ng-model
 
 ```html
 <form ng-app="" name="myForm">
@@ -102,13 +104,13 @@ input.ng-touched {}
 - `ng-untouched`: 控件未失去焦点
 - `ng-pending`: 任何未满足$asyncValidators的情况
 
-### $scope
+## $scope
 
 **$scope** 是一个 JavaScript 对象，带有属性和方法。当在控制器中添加 **$scope** 对象时，视图 (HTML) 可以获取了这些属性。
 
 在所有 controller 里面都是可以直接用 `{{$root.key}}` 来显示的，那当然也可以赋值给 $scope
 
-### 过滤器
+## 过滤器
 
 过滤器可以使用一个管道字符（|）添加到表达式和指令中。
 
@@ -171,7 +173,7 @@ app.filter('reverse', function() {
 })
 ```
 
-### 服务
+## 服务
 
 在 AngularJS 中，服务是一个函数或对象，可在你的 AngularJS 应用中使用。
 
@@ -243,7 +245,7 @@ app.filter('format', ['myService', '$location', function(myService, location) {
 // 指定服务后，函数参数中可以拿到
 ```
 
-### 表格
+## 表格
 
 ng-repeat 指令可以完美的显示表格。
 
@@ -289,7 +291,7 @@ app.controller('myCtrl', function($scope) {
 </table>
 ```
 
-### 模块
+## 模块
 
 通过 AngularJS 的 **angular.module** 函数来创建模块，模块定义了一个应用程序，模块是应用控制器的容器。
 
@@ -305,7 +307,7 @@ let app = angular.module('myApp', [])
 > 在模块定义中 [] 参数用于定义模块的依赖关系。
 > 中括号[]表示该模块没有依赖，如果有依赖的话会在中括号写上依赖的模块名字。
 
-### 全局 API
+## 全局 API
 
 | API                                                          | 描述                                          |
 | ------------------------------------------------------------ | --------------------------------------------- |
@@ -316,7 +318,7 @@ let app = angular.module('myApp', [])
 | angular.copy()                                               | 数组或对象深度拷贝                            |
 | angular.equals()                                             | 如果两个对象相等返回 true                     |
 
-### 包含
+## 包含
 
 使用 **ng-include** 指令来包含 HTML 内容:
 
@@ -366,7 +368,7 @@ ng-include 指令除了可以包含 HTML 文件外，还可以包含 AngularJS �
 </body>
 ```
 
-### 依赖注入
+## 依赖注入
 
 AngularJS 提供很好的依赖注入机制。以下5个核心组件用来作为依赖注入：
 
@@ -435,7 +437,7 @@ constant(常量)用来在配置阶段传递数值，注意这个常量在配置�
 app.constant("configParam", "constant value");
 ```
 
-### 路由
+## 路由
 
 单页 Web 应用中 AngularJS 通过 **#! + 标记** 实现。
 
