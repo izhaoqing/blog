@@ -1,10 +1,10 @@
-## 异步操作
+# 异步操作
 
-### 常见的异步操作
+## 常见的异步操作
 
 网络请求，IO 操作，定时函数。
 
-### Promise
+## Promise
 
 ```js
 let p = new Promise((res, rej) => {
@@ -23,7 +23,7 @@ p.then(res => {
 
 如果第一个 then 返回值是一个 `Promise` 的话，情况就不一样了，如果前面返回的是 `Promise` 对象，后面的 `then` 将会被当做这个返回的 `Promise` 的第一个 `then` 来对待 。
 
-#### 异常捕获
+### 异常捕获
 
 `then `会接收两个参数（函数），第一个参数会在执行 `resolve` 之后触发（还能传递参数），第二个参数会在执行 `reject` 之后触发（其实也可以传递参数，和 `resolve` 传递参数一样）
 
@@ -32,7 +32,7 @@ p.then(res => {
 - 让程序看起来更加简洁，是一个串联的关系，没有分支（如果用 `then` 的两个参数，就会出现分支，影响阅读）
 - 看起来更像是 `try - catch` 的样子，更易理解
 
-#### Promise.all
+### Promise.all
 
 ```js
 let p1 = new Promise();
@@ -46,7 +46,7 @@ let p = Promise.all([p1, p2]).then(res => {
 
 （2）只要`p1`、`p2`之中有一个被`rejected`，`p`的状态就变成`rejected`，此时第一个被`reject`的实例的返回值，会传递给`p`的回调函数。
 
-#### Promise.race
+### Promise.race
 
 ```js
 let p = Promise.race([p1, p2]).then(res => { 
@@ -56,7 +56,7 @@ let p = Promise.race([p1, p2]).then(res => {
 
 只要`p1`、`p2`之中有一个实例率先改变状态，`p`的状态就跟着改变。那个率先改变的 Promise 实例的返回值，就传递给`p`的回调函数。
 
-### Generator
+## Generator
 
 `yield`后面会接一个普通的 JS 对象，而`yield*`后面会接一个`Generator`，而且会把它其中的`yield`按照规则来一步一步执行。如果有多个`Generator`串联使用的话（例如`Koa`源码中）
 
@@ -79,7 +79,7 @@ g1().next();
 console.log(str); // 12345
 ```
 
-### async-await
+## async-await
 
 `async`函数的返回值是 Promise 对象，可以使用`then`方法添加回调函数。`async`函数内部`return`语句返回的值，会成为`then`方法回调函数的参数。
 
@@ -95,7 +95,7 @@ f().then(
 )
 ```
 
-#### Promise对象状态改变
+### Promise对象状态改变
 
 `async`函数返回的 Promise 对象，必须等到内部所有`await`命令后面的 Promise 对象执行完，才会发生状态改变，除非遇到`return`语句或者抛出错误。也就是说，只有`async`函数内部的异步操作执行完，才会执行`then`方法指定的回调函数。
 
@@ -115,7 +115,7 @@ asyncFn().then(res => {
 // 再执行 then 内的函数
 ```
 
-#### await
+### await
 
 正常情况下，`await`命令后面是一个 Promise 对象。如果不是，会被转成一个立即`resolve`的 Promise 对象。
 
@@ -173,7 +173,7 @@ let bar = await barPromise;
 
 上面两种写法，`getFoo`和`getBar`都是同时触发，这样就会缩短程序的执行时间。
 
-#### async/await with forEach
+### async/await with forEach
 
 在 forEach 中使用循环使用异步函数可能会有点问题。
 

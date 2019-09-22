@@ -1,4 +1,4 @@
-## CSS note
+# CSS note
 
 ### css3条件判断
 
@@ -68,7 +68,7 @@ p { width: 200px; font-size: 14px; border: 1px solid #ddd; margin: 10px 0;}
 
 效果图如下：
 
-<img src='img/word-break.png' width='400'/>
+<img src='http://ww1.sinaimg.cn/large/006y8mN6gy1g78dn2s9ybj30jm0du0tx.jpg' width='400'/>
 
 在表格中，设置单元格内容超出隐藏需要给 table 设置样式：
 

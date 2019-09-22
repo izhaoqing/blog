@@ -1,7 +1,11 @@
+# 配置两个git账户
+
 公司的代码在 gitlab 上，还有自己项目托管在 github，需要存在两个 git 账户。
+
 ### 修改配置
+
 多个账户需要在每个项目中分别配置用户名和邮箱，如果有配置过全局用户名和邮箱，可以删除。
-```shell
+```bash
 $ git config --global --unset user.name
 $ git config --global --unset user.email
 ```

@@ -1,4 +1,4 @@
-## JavaScript有用的代码片段
+# JavaScript有用的代码片段
 
 ### 小数取整
 

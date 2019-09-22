@@ -1,4 +1,4 @@
-## Axios
+# Axios
 
 ```js
 const axios = require('axios');

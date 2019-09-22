@@ -1,3 +1,5 @@
+# 分栏布局/网格布局
+
 ## 分栏布局
 
 分栏布局可以实现大段文字像报纸排版一样分栏显示，部分属性如下：
@@ -32,7 +34,7 @@ column-rule: 1px solid #ddd;
 </div>
 ```
 
-![分栏布局](img/column_grid.png)
+![分栏布局](http://ww3.sinaimg.cn/large/006y8mN6gy1g78ddqo0zpj31nw0m0tdv.jpg)
 
 ## 网格布局
 
@@ -83,7 +85,7 @@ grid-column-start: <number> | <name> | span <number> | span <name> | auto ;
 grid-column-end: <number> | <name> | span <number> | span <name> | auto ;    
 grid-row-start: <number> | <name> | span <number> | span <name> | auto ;    
 grid-row-end: <number> | <name> | span <number> | span <name> | auto ;  
-```  
+```
 
 > \<number> | \<name>: 指定带编号或者名字的网格线。    
 > span \<number\>: 跨越轨道的数量。    
@@ -94,7 +96,7 @@ auto: 自动展示位置，默认跨度为1。
 /*缩写形式*/
 grid-column: <start-line> / <end-line> | <start-line> / span <value>
 grid-row: <start-line> / <end-line> | <start-line> / span <value>
-```   
+```
 
 #### 2, grid-area
 

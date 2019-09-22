@@ -1,32 +1,22 @@
-// 跟路径
-const rootPath = process.cwd()
-const docs = rootPath + "/docs"
+// 文档路径
+const docsPath = process.cwd() + '/docs'
 const fs = require('fs')
 
 // 获取文件名
-function getFileName(root, dir) {
+function getFileName(root, dir, title) {
     let path = root + dir
     let fileNames = []
+    let readmeContent = ''
     fs.readdirSync(path).forEach(file => {
         if (/.md$/.test(file)) {
-            file = file.replace(/(README)?.md/, '')
-            fileNames.push(dir + file)
+            let name = file.replace(/(README)?.md$/, '')
+            fileNames.push(dir + name)
+            if (!/^README.md$/.test(file)) readmeContent += `+ [${name}](${file})\n`
         }
     })
     fileNames.sort()
+    fs.writeFileSync(root + dir + 'README.md', `# 目录\n\n` + readmeContent)
     return fileNames
-}
-
-// 生成 sidebar 对象
-function genSidebar(title, children = [''], collapsable = true, sidebarDepth = 0) {
-    var arr = new Array()
-    arr.push({
-        title,
-        collapsable,
-        sidebarDepth,
-        children
-    })
-    return arr
 }
 
 let dirs = [
@@ -68,11 +58,14 @@ let dirs = [
     },
 ]
 
-const sidebarObj = dirs.reduce((obj, next) => {
-    return {
-        [next.path]: genSidebar(next.title, getFileName(docs, next.path), false),
-        ...obj
-    }
+module.exports = dirs.reduce((obj, item) => {
+    obj[item.path] = [
+        {
+            title: item.title,
+            collapsable: true,
+            sidebarDepth: 0,
+            children: getFileName(docsPath, item.path, item.title)
+        }
+    ]
+    return obj;
 }, {})
-
-module.exports = sidebarObj

@@ -1,4 +1,4 @@
-## Vue-Router
+# Vue-Router
 
 ### Install
 

@@ -1,3 +1,5 @@
+# WebPack笔记
+
 ### sourceMap for Less
 
 打包后的less/css文件以 style 标签引入，为了区分样式属于那个文件，需要把css文件分开，以 link 标签引入，目前没有实现，因为 minicssplugin 是把所有css文件合并成一个，他不能和 style-loader 同时存在，只能在production环境中使用。sourceMap for less 能够解决。在浏览器中可以看到 less 文件。

@@ -1,4 +1,4 @@
-## 移动端rem自适应布局
+# 移动端rem自适应布局
 
 ### 用js设置`font-size`
 
@@ -64,7 +64,7 @@ body {
 ```
 
 引入后：
-   
+
 ```CSS
 body {    
     width: 7.5rem;    

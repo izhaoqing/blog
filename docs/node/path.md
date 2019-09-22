@@ -1,9 +1,9 @@
-## Path
+# Path
 
-### path.join([…paths])
+###  `path.join([…paths])`
 
-- `...paths` [<string>](http://nodejs.cn/s/9Tw2bK) 路径片段的序列。
-- 返回: [<string>](http://nodejs.cn/s/9Tw2bK)
++ `...paths` [`<string>`](http://nodejs.cn/s/9Tw2bK) 路径片段的序列。
++ 返回: [`<string>`](http://nodejs.cn/s/9Tw2bK)
 
 `path.join()` 方法使用平台特定的分隔符作为定界符将所有给定的 `path` 片段连接在一起，然后规范化生成的路径。
 
@@ -19,10 +19,10 @@ path.join('foo', {}, 'bar');
 
 如果任何路径片段不是字符串，则抛出 [`TypeError`](http://nodejs.cn/s/Z7Lqyj)。
 
-### path.resolve([...paths])
+###  `path.resolve([...paths])`
 
-- `…paths` [<string>](http://nodejs.cn/s/9Tw2bK)路径或路径片段的序列。
-- 返回: [<string>](http://nodejs.cn/s/9Tw2bK)
++  `…paths` [`<string>`](http://nodejs.cn/s/9Tw2bK)路径或路径片段的序列。
++  返回: [`<string>`](http://nodejs.cn/s/9Tw2bK)
 
 `path.resolve()` 方法将路径或路径片段的序列解析为绝对路径。其处理方式类似于对这些路径逐一进行cd操作。
 
@@ -58,31 +58,5 @@ cd a/../subfile
 pwd
 ```
 
-如果任何参数不是字符串，则抛出 [`TypeError`](http://nodejs.cn/s/Z7Lqyj)。
 
-### 读取文件列表，生成entry
-
-```js
-const path = require('path');
-const globby = require('globby');
-
-const getEntry = () => {
-    // 异步方式获取所有的路径
-    const paths = globby.sync('./pages/*.js', {
-        cwd: path.join(__dirname, './src')
-    });
-    const rs = {};
-    paths.forEach(v => {
-        // 计算 filename
-        const name = path.basename(v, '.js');
-        let p = path.join('./src', v);
-        if (!p.startsWith('.')) {
-            // 转成相对地址
-            p = './' + p;
-        }
-        rs[name] = p;
-    });
-    return rs;
-};
-```
 

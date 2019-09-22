@@ -1,3 +1,7 @@
+# 原型
+
+原型学习笔记
+
 ### 对象与函数
 
 js 的数据类型有简单类型：Number，String，Boolean，undefined，null；复杂类型(引用类型)：Object，包括 Function，Object，Array，Date等。
@@ -59,6 +63,14 @@ console.log(fn.getYear());
 
 这里的"`__proto__`"成为“隐式原型”。
 
+总结：
+
++ `Symbol` 作为构造函数来说并不完整，因为不支持语法 `new Symbol()`，但其原型上拥有 `constructor` 属性，即 `Symbol.prototype.constructor`。
++ 引用类型 `constructor` 属性值是可以修改的，但是对于基本类型来说是只读的，当然 `null` 和 `undefined` 没有 `constructor` 属性。
++ `__proto__` 是每个实例上都有的属性，`prototype` 是构造函数的属性，这两个并不一样，但  `p.__proto__` 和 `Parent.prototype` 指向同一个对象。
++ `__proto__` 属性在 `ES6` 时被标准化，但因为性能问题并不推荐使用，推荐使用 `Object.getPrototypeOf()`。
++ 每个对象拥有一个原型对象，通过 `__proto__` 指针指向上一个原型 ，并从中继承方法和属性，同时原型对象也可能拥有原型，这样一层一层，最终指向 `null`，这就是原型链。
+
 ### 原型链
 
 **访问一个对象的属性时，先在基本属性中查找，如果没有，再沿着__proto__这条链向上找，这就是原型链**。对象的原型链是沿着`__proto__`这条线走的。
@@ -67,7 +79,7 @@ console.log(fn.getYear());
 
 hasOwnProperty方法是从哪里来的?
 
-![img](https://images0.cnblogs.com/blog/138012/201409/182014277067963.png)
+![](http://ww1.sinaimg.cn/large/006y8mN6gy1g78f40u2gij30is0c9ta8.jpg)
 
 ### 执行上下文环境
 
@@ -101,7 +113,7 @@ hasOwnProperty方法是从哪里来的?
 
 其实这是一个压栈出栈的过程——执行上下文栈。如下图：
 
-![img](https://images0.cnblogs.com/blog/138012/201409/232122300768665.png)
+![](http://ww3.sinaimg.cn/large/006y8mN6gy1g78f5nof0mj30g202l0sl.jpg)
 
  ### this 对象
 
@@ -225,3 +237,4 @@ function fn (b) {
 })(fn)
 ```
 
+参考：[王福朋 - 博客园 - 原型]([https://www.cnblogs.com/wangfupeng1988/tag/%E5%8E%9F%E5%9E%8B%E9%93%BE/](https://www.cnblogs.com/wangfupeng1988/tag/原型链/))

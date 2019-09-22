@@ -1,4 +1,4 @@
-## 设置checkbox, radio的选中状态
+# 设置checkbox, radio的选中状态
 
 在input标签中，给选框添加属性 `checked`，属性值为任何值此选框都为选中状态，包括 `false`, `0`, 或者无值。
 

@@ -1,6 +1,6 @@
-## 文档在线预览
+# 文档在线预览
 
-### PDF 
+## PDF 
 
 pdf 文件可以在浏览器直接打开预览。
 
@@ -10,7 +10,7 @@ pdf 文件可以在浏览器直接打开预览。
 
 `pdf.js` 可以实现在html下直接浏览pdf文档，是一款开源的pdf文档读取解析插件，非常强大，能将PDF文件渲染成Canvas。主要包含两个库文件，一个 `pdf.js` 和一个 `pdf.worker.js`，一个负责API解析，一个负责核心解析。
 
-### Excel 转 Html
+## Excel 转 Html
 
 [**Sheepjs Github**](<https://github.com/SheetJS/js-xlsx>)
 
@@ -70,7 +70,7 @@ pdf 文件可以在浏览器直接打开预览。
 
 `sheetjs.js` 为：<https://raw.githubusercontent.com/SheetJS/js-xlsx/master/dist/xlsx.full.min.js>
 
-### word/excel/pdf 
+## word/excel/pdf 
 
 [**Office Web Viewer**](<https://www.microsoft.com/en-us/microsoft-365/blog/2013/04/10/office-web-viewer-view-office-documents-in-a-browser/?eu=true>)
 

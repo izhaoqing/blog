@@ -526,7 +526,7 @@ render() {
 
 ## 生命周期
 
-![生命周期](img/react_lifecycle.jpg)
+![生命周期](http://ww1.sinaimg.cn/large/006y8mN6gy1g78hnh2806j30kk0p0dhq.jpg)
 
 ### componentWillReceiveProps(nextProps)
 
