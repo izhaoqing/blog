@@ -1,5 +1,7 @@
+---
+editLink: false
+---
 # 目录
-
 + [gulp](gulp.md)
 + [linux](linux.md)
 + [mongodb](mongodb.md)

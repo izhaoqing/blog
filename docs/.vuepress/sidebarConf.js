@@ -15,7 +15,9 @@ function getFileName(root, dir, title) {
         }
     })
     fileNames.sort()
-    fs.writeFileSync(root + dir + 'README.md', `# 目录\n\n` + readmeContent)
+    // 关闭`编辑此页`
+    readmeContent = '---\neditLink: false\n---\n# 目录\n' + readmeContent
+    fs.writeFileSync(root + dir + 'README.md', readmeContent)
     return fileNames
 }
 

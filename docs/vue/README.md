@@ -1,5 +1,7 @@
+---
+editLink: false
+---
 # 目录
-
 + [vue-note](vue-note.md)
 + [vue-router](vue-router.md)
 + [vuex](vuex.md)

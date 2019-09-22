@@ -1,5 +1,7 @@
+---
+editLink: false
+---
 # 目录
-
 + [angularJs](angularJs.md)
 + [array_method](array_method.md)
 + [array_reduce](array_reduce.md)

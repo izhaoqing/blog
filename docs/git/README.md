@@ -1,5 +1,7 @@
+---
+editLink: false
+---
 # 目录
-
 + [configTwoGit](configTwoGit.md)
 + [git](git.md)
 + [git2](git2.md)
