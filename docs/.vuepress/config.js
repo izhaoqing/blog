@@ -5,7 +5,10 @@ module.exports = {
         ['meta', { name: 'referrer', content: 'no-referrer' }],
         ['link', { rel: 'icon', href: '/logo.png' }]
     ],
-    plugins: ['@vuepress/back-to-top'],
+    plugins: [
+        '@vuepress/back-to-top', 
+        require('./vuepress-plugin-comment.js'),
+    ],
     locales: {
         '/': {
             lang: 'zh-CN',
