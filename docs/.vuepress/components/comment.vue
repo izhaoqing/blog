@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Valine from 'valine'
+let valineConfig = require('../../../valineConfig');
 
 export default {
     name: 'Comment',
@@ -15,17 +15,21 @@ export default {
         }
     },
     mounted() {
-        this.fetchComment();
+        import('valine').then(module => {
+            window.Valine = module.default;
+            this.fetchComment();
+        })
     },
     methods: {
         fetchComment() {
             // 目录页面不显示评论
             this.show = /.html$/.test(this.$route.path);
-            this.show && new Valine({
-                el: '#commentEl',
-                appId: 'eS6ylyz4RjgKuOWY8drbb8Iw-gzGzoHsz',
-                appKey: 'oPuDLi69L1RPP6JyWQDE0PXg',
-                path: this.$page.key
+            this.$nextTick(() => {
+                this.show && new Valine({
+                    el: '#commentEl',
+                    path: this.$page.key,
+                    ...valineConfig
+                })
             })
         }
     },
