@@ -2,13 +2,13 @@
 editLink: false
 ---
 # 目录
-+ [gulp](gulp.md)
-+ [linux](linux.md)
++ [Gulp](gulp.md)
++ [Linux常用命令](linux.md)
 + [mongodb](mongodb.md)
-+ [nginx](nginx.md)
-+ [npm--save-dev](npm--save-dev.md)
-+ [svn](svn.md)
-+ [viewDocuments](viewDocuments.md)
-+ [vscode](vscode.md)
-+ [webpack](webpack.md)
-+ [webpack_trick](webpack_trick.md)
++ [Nginx](nginx.md)
++ [npm](npm--save-dev.md)
++ [SVN](svn.md)
++ [文档在线预览](viewDocuments.md)
++ [VSCode](vscode.md)
++ [WebPack](webpack.md)
++ [WebPack笔记](webpack_trick.md)

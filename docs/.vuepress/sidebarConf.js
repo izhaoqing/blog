@@ -3,7 +3,7 @@ const docsPath = process.cwd() + '/docs'
 const fs = require('fs')
 
 // 获取文件名
-function getFileName(root, dir, title) {
+function getFileName(root, dir) {
     let path = root + dir
     let fileNames = []
     let readmeContent = ''
@@ -11,7 +11,11 @@ function getFileName(root, dir, title) {
         if (/.md$/.test(file)) {
             let name = file.replace(/(README)?.md$/, '')
             fileNames.push(dir + name)
-            if (!/^README.md$/.test(file)) readmeContent += `+ [${name}](${file})\n`
+            if (!/README.md/.test(file)) {
+                // 取文档中的 title
+                let title = fs.readFileSync(path + file, 'utf-8').match(/(?<=#\s+)[^\s]+(?=\s)/m)
+                readmeContent += `+ [${title ? title[0] : name}](${file})\n`
+            }
         }
     })
     fileNames.sort()
@@ -66,7 +70,7 @@ module.exports = dirs.reduce((obj, item) => {
             title: item.title,
             collapsable: true,
             sidebarDepth: 0,
-            children: getFileName(docsPath, item.path, item.title)
+            children: getFileName(docsPath, item.path)
         }
     ]
     return obj;
