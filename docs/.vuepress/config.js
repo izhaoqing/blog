@@ -3,7 +3,7 @@ const sidebar = require('./sidebarConf.js');
 module.exports = {
     head: [
         ['meta', { name: 'referrer', content: 'no-referrer' }],
-        ['link', { rel: 'icon', href: '/logo.png' }]
+        ['link', { rel: 'icon', href: '/favicon.ico' }]
     ],
     plugins: [
         '@vuepress/back-to-top', 
