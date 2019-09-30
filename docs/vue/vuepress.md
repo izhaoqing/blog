@@ -111,7 +111,7 @@ fs.readdirSync(path).forEach(file => {
     }
   }
 })
-// 关闭`在GitHub上编辑次页`功能
+// 关闭`在GitHub上编辑此页`功能
 readmeContent = '---\neditLink: false\n---\n# 目录\n' + readmeContent
 fs.writeFileSync(root + dir + 'README.md', readmeContent)
 ```
@@ -124,7 +124,7 @@ editLink: false
 ---
 # 目录
 + [title1](link1)
-+ [title2](link)
++ [title2](link2)
 ```
 
 完整的代码：
@@ -153,7 +153,7 @@ function getFileName(root, dir) {
             }
         }
     })
-    // 无`编辑此页`
+    //  关闭`在GitHub上编辑此页`功能
     readmeContent = '---\neditLink: false\n---\n# 目录\n' + readmeContent
     fs.writeFileSync(root + dir + 'README.md', readmeContent)
   	// 做排序，可以将文档命名成：1.xx.md, 2.xx.md
@@ -341,6 +341,7 @@ cd -
 ```
 
 在域名服务商做一个解析配置，点击修改记录，类型选择 CNAME，记录值填 `<USERNAME>.github.io`。
+
 
 
 
