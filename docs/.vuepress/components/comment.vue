@@ -22,6 +22,8 @@ export default {
     },
     methods: {
         fetchComment() {
+            // 未匹配到任何路由，404页面
+            if (!this.$route.name) return;
             // 目录页面不显示评论
             this.show = /.html$/.test(this.$route.path);
             this.$nextTick(() => {
