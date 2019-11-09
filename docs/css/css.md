@@ -240,13 +240,13 @@ input[type=search]::-webkit-search-cancel-button:after{
 </html>
 ```
 
-#### 直接给 document`s stylesheet 增加样式
+### 直接给 document`s stylesheet 增加样式
 
 ```js
 document.styleSheet[0].addRule('p.active', 'color: red');
 ```
 
-#### 引入字体
+### 引入字体
 
 ```css
 @font-face {
@@ -260,9 +260,21 @@ document.styleSheet[0].addRule('p.active', 'color: red');
 }
 ```
 
-#### pointer-events 禁止鼠标事件
+### pointer-events 禁止鼠标事件
 
 ```css
 pointer-event: none;
+```
+
+### 禁止设置了 felx: 1 的元素被子节点撑开
+
+```css
+.parent {
+  display: flex;
+}
+.child {
+  flex: 1;
+  width: 0;
+}
 ```
 

@@ -62,3 +62,7 @@ typings/
 
 # 忽略评论组件的配置参数（appid,appkey）
 valineConfig.js
+
+# 忽略草稿目录
+test/
+

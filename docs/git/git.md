@@ -193,6 +193,8 @@ Git 提供了一个命令`git reflog`用来记录你的每一次命令，可以�
 | \$ git reset  /  \$ git reset \<filename>           | 撤销 add    |
 | \$ git reset HEAD^                                  | 撤销 commit |
 
+如果新增加文件，没有被跟踪 (untracked)，使用 `git checkout .` 是不起作用的，可以使用 `git clean -n`，先查看要被删除的文件，再使用 `git clean -f` 删除。
+
 如果需要撤销操作到 add 之前，且不保存修改：
 
 | 阶段                              | 操作                                               |
@@ -243,6 +245,12 @@ $ git push -u origin master
 ```
 
 实际上是把当前分支`master`推送到远程。由于远程库是空的，第一次推送`master`分支时，加上了`-u`参数，Git不但会把本地的`master`分支内容推送的远程新的`master`分支，还会把本地的`master`分支和远程的`master`分支关联起来，在以后的推送或者拉取时就可以简化命令。
+
+### 设置远程仓库地址
+
+```bash
+$ git remote set-url origin [url]
+```
 
 ## 冲突
 
