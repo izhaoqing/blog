@@ -108,7 +108,12 @@ input.ng-touched {}
 
 **$scope** 是一个 JavaScript 对象，带有属性和方法。当在控制器中添加 **$scope** 对象时，视图 (HTML) 可以获取了这些属性。
 
-在所有 controller 里面都是可以直接用 `{{$root.key}}` 来显示的，那当然也可以赋值给 $scope
+在所有 controller 里面都是可以直接用 `{{$root.key}}` 来显示的，那当然也可以赋值给 $scope。
+
+```js
+// 浏览器中显示选中节点的 scope 
+angular.element($0).scope()
+```
 
 ## 过滤器
 
