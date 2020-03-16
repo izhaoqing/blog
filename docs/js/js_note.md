@@ -244,7 +244,7 @@ Math.floor(n)  // 1
 n | 0  // 1
 ```
 
-### 通过ID计算得到一个 < 200 的随机数
+## 通过ID计算得到一个 < 200 的随机数
 
 ```js
 yun5.readCount = (id, num = 0) => {
@@ -279,7 +279,7 @@ yun5.readCount = (id, num = 0) => {
 };
 ```
 
-###  JS 添加浏览器内核前缀
+## JS 添加浏览器内核前缀
 
 ```js
 let eleStyle = document.createElement('div').style;
@@ -305,7 +305,7 @@ let prefixStyle = (style) => {
 }
 ```
 
-### 标签函数
+## 标签函数
 
 **String.raw()** 是一个[模板字符串](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/template_strings)的标签函数。[String.raw-MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/raw)
 
@@ -333,7 +333,7 @@ String.raw({raw: "test"}, 0, 1, 2);
 // "t0e1s2t"，我认为你通常不需要把它当成普通函数来调用
 ```
 
-### 判断空对象
+## 判断空对象
 
 ```js
 let obj = {};
@@ -354,7 +354,7 @@ const isEmpty3 = obj => {
 }
 ```
 
-### **insertAdjacentHTML()** 
+## **insertAdjacentHTML()** 
 
 ```js
 element.insertAdjacentHTML(position, text);
@@ -380,7 +380,7 @@ position是相对于元素的位置，并且必须是以下字符串之一：
 
 text 是要被解析为HTML或XML,并插入到DOM树中的字符串。
 
-### new 的过程
+## new 的过程
 
 1. 生成一个新的对象；
 2. 链接到原型；
@@ -402,7 +402,7 @@ function create() {
 }
 ```
 
-### 正则判断邮箱
+## 正则判断邮箱
 
 ```js
 let vaildEmail = email => {
@@ -411,7 +411,7 @@ let vaildEmail = email => {
 }
 ```
 
-### 动态加载 js
+## 动态加载 js
 
 ```js
 function loadJs(src) {
@@ -429,7 +429,7 @@ function loadJs(src) {
 }
 ```
 
-### 去除标签的 style width height 属性
+## 去除标签的 style width height 属性
 
 ```js
 function formatStyle(html){
@@ -441,7 +441,7 @@ function formatStyle(html){
 }
 ```
 
-### 获取图片原始宽高
+## 获取图片原始宽高
 
 ```js
 let src = 'a.png';
@@ -449,6 +449,26 @@ let img = new Image();
 img.src = src;
 img.onload = function () {
   console.log(img.width);
+}
+```
+
+## 数字单位汉字格式化
+
+```js
+// 格式化数字，增加单位，保留两位小数
+function quantityFormat(n) {
+    const value = Number(n);
+    if (!value) return n;
+    let result = '';
+    const k = 10000;
+    const unit = ['', '万', '亿', '万亿'];
+    if (value < k) {
+        result = value;
+    } else {
+        const i = Math.floor(Math.log(value) / Math.log(k));
+        result = ((value / Math.pow(k, i))).toFixed(2) + unit[i];
+    }
+    return result;
 }
 ```
 
