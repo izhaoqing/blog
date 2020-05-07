@@ -60,6 +60,10 @@ module.exports = {
                 link: '/vue/'
             },
             {
+                text: 'Vue组件精讲',
+                link: '/vueCom/'
+            },
+            {
                 text: 'Node',
                 link: '/node/'
             },
