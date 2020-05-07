@@ -54,7 +54,8 @@ IdentityFile ~/.ssh/id_rsa_gitlab
 
 显示公钥再粘贴到 github/gitlab.
 ```shell
-$ ssh-add -K ~/.ssh/id_rsa
+$ cat ~/.ssh/id_rsa_github
+$ cat ~/.ssh/id_rsa_gitlab
 ```
 
 ### 测试配置是否成功

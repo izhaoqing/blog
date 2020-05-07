@@ -278,3 +278,25 @@ pointer-event: none;
 }
 ```
 
+### `writing-mode`文本水平或垂直排布
+
+> [https://developer.mozilla.org/zh-CN/docs/Web/CSS/writing-mode](https://developer.mozilla.org/zh-CN/docs/Web/CSS/writing-mode)
+
+```
+horizontal-tb
+```
+
+内容从左到右水平，从上到下垂直。下一条水平线位于上一条线的下方。
+
+```
+vertical-rl
+```
+
+内容从上到下垂直流动，从右到左水平流动。下一条垂直线位于上一行的左侧。
+
+```
+vertical-lr
+```
+
+内容从上到下垂直流动，从左到右水平流动。下一条垂直线位于前一行的右侧。
+

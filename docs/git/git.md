@@ -376,6 +376,10 @@ git rm -r --cached folder
 git commit -m 'delete files'
 ```
 
+## 异常处理
+
+[Unable to connect to git remote repository](https://stackoverflow.com/questions/24543372/unable-to-connect-to-git-remote-repository)
+
 ## 参考
 
 [易百教程-Git](https://www.yiibai.com/git)  
