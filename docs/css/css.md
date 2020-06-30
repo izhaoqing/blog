@@ -260,6 +260,23 @@ document.styleSheet[0].addRule('p.active', 'color: red');
 }
 ```
 
+`@font-face`可以设置 `font-weight` 属性，但是设置后，`fong-weight` 样式无效。
+
+```css
+@font-face {
+  font-family: 'DSDigitalBold';
+  font-weight: bold;
+  src: url('fontname.woff') format('woff'),
+      url('fontname.ttf') format('truetype'),
+      url('fontname.svg#fontname') format('svg');
+}
+.font-dsd {
+  font-family: 'DSDigitalBold';
+  font-weight: bold;
+  /* 有 font-weight 这条样式，文本也未加粗 */
+}
+```
+
 ### pointer-events 禁止鼠标事件
 
 ```css
@@ -299,4 +316,27 @@ vertical-lr
 ```
 
 内容从上到下垂直流动，从左到右水平流动。下一条垂直线位于前一行的右侧。
+
+### 1px边框问题
+
+利用伪元素先放大在缩小，漏出1px的边框来实现，圆角也是支持的。
+
+```css
+.border::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200%;
+  border: 1px solid red;
+  /* border-left: none; */
+  border-radius: 10px;
+  color: red;
+  height: 200%;
+  transform-origin: left top;
+  transform: scale(0.5);
+  pointer-events: none;
+  box-sizing: border-box;
+}
+```
 

@@ -92,6 +92,10 @@ module.exports = {
                         link: '/css/'
                     },
                     {
+                        text: '小程序',
+                        link: '/miniProgram'
+                    },
+                    {
                         text: 'Flutter',
                         link: '/flutter/'
                     },

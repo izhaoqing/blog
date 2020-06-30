@@ -70,6 +70,10 @@ let dirs = [
     {
         path: '/vueCom/',
         title: 'Vue组件精讲'
+    },
+    {
+        path: '/mimiProgram',
+        title: '小程序'
     }
 ]
 

@@ -293,6 +293,24 @@ this.$once('hook:beforeDestroy', () => {
 });
 ```
 
+### 动态事件名
+
+事件名可以是一个变量。
+
+```vue
+<template>
+	<div @[eventName]="fn"
+</template>
+<script>
+	export default {
+    props: ['eventName'],
+    methods: {
+      fn() {}
+    }
+  }
+</script>
+```
+
 ### 记录页面滚动位置
 
 ```js
@@ -595,7 +613,7 @@ Vue.component('my-component', {
 <text-document doc.sync="doc"></text-document>
 ```
 
-### 定义模版
+### 内联模版
 
 + inline-template 内联模版，模版更加灵活，但作用域更加难以理解。
 

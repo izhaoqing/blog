@@ -210,7 +210,7 @@ $ git status
 | -------------------------------- | ------------------------------ |
 | $ git reset origin/<branch_name> | 直接覆盖本地提交和远程保持一致 |
 
-如果新增加文件，没有被跟踪 (untracked)，使用 `git checkout .` 是不起作用的，可以使用 `git clean -n`，先查看要被删除的文件，再使用 `git clean -f` 删除。
+如果新增加文件，没有被跟踪 (untracked)，使用 `git checkout .` 是不起作用的，可以使用 `git clean -n`，先查看要被删除的文件，再使用 `git clean -f` 删除 (-df文件夹)。
 
 如果需要撤销操作到 add 之前，且不保存修改：
 
