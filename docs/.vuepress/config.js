@@ -93,7 +93,7 @@ module.exports = {
                     },
                     {
                         text: '小程序',
-                        link: '/miniProgram'
+                        link: '/miniProgram/'
                     },
                     {
                         text: 'Flutter',

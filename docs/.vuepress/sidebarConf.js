@@ -72,7 +72,7 @@ let dirs = [
         title: 'Vue组件精讲'
     },
     {
-        path: '/mimiProgram',
+        path: '/miniProgram/',
         title: '小程序'
     }
 ]

@@ -21,7 +21,7 @@ Enter a file in which to save the key (/Users/zq/.ssh/id_rsa): id_rsa_github
 ```shell
 Enter a file in which to save the key (/Users/zq/.ssh/id_rsa): id_rsa_gitlab
 ```
-分别生成了两组文件，名称分别是 `id_rsa_github1、id_rsa_github2`。
+分别生成了两组文件，名称分别是 `id_rsa_github、id_rsa_gitlab`。
 
 当提示输入密码信息时，直接回车跳过，否则每次拉代码都需要输入密码。
 
