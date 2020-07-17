@@ -84,6 +84,7 @@ $ npm config get registry
 ```shell
 $ mv docs blog #重命名
 $ touch config.js #新建文件
+$ mkdir dir && cd $_ #创建并进入文件夹
 ```
 
 ### 启动 mongodb

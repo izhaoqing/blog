@@ -113,7 +113,7 @@ module.exports = {
 
 更多的参数设置：
 
-```js
+```
 target：要使用url模块解析的url字符串
 forward：要使用url模块解析的url字符串
 agent：要传递给http（s）.request的对象（请参阅Node的https代理和http代理对象）
