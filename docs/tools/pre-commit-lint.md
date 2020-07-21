@@ -61,9 +61,16 @@ npm install lint-staged -D
 ++ }
 ```
 
+加上 `--fix` 会自动修复。
+
+```diff
+--- "vue-cli-service lint --c ./.eslintrc-pre-commit.js"
++++ "vue-cli-service lint --c ./.eslintrc-pre-commit.js --fix"
+```
+
 > 1. vue 项目可以使用 [gitHooks](https://cli.vuejs.org/guide/cli-service.html#git-hooks)。
-> 2. husky 要求 node 版本 >= 10，Git 版本 >=2.13.0。
-> 3. 安装 husky 会对 git 做配置，使用 cnpm 可能会导致。
+> 2. husky 要求 node 版本 >= 10，Git 版本 >= 2.13.0。
+> 3. 安装 husky 会自动修改 git 钩子文件，使用 cnpm 可能会导致使用时 ESLint 命令不执行。
 
 
 
