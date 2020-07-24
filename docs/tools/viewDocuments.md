@@ -70,6 +70,10 @@ pdf 文件可以在浏览器直接打开预览。
 
 `sheetjs.js` 为：<https://raw.githubusercontent.com/SheetJS/js-xlsx/master/dist/xlsx.full.min.js>
 
+## word
+
+[mammoth](https://github.com/mwilliamson/mammoth.js/) 是一个可以将 word 文档转成 html 片段的工具，对于复杂的样式可能会有差异。
+
 ## word/excel/pdf 
 
 [**Office Web Viewer**](<https://www.microsoft.com/en-us/microsoft-365/blog/2013/04/10/office-web-viewer-view-office-documents-in-a-browser/?eu=true>)
