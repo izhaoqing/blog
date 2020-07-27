@@ -1,12 +1,13 @@
 <template>
     <div v-if="show" class="gitalk-plugin">
-        <div ref="commentEl" class="gitalk"></div>
+        <div :key="$page.key" ref="commentEl" class="gitalk"></div>
     </div>
 </template>
 
 <script>
 import 'gitalk/dist/gitalk.css';
 import Gitalk from 'gitalk';
+const valineConfig = require('../../../valineConfig');
 
 export default {
     name: "GitalkPlugin",
@@ -16,10 +17,6 @@ export default {
         }
     },
     mounted() {
-        // import('valine').then(module => {
-        //     window.Valine = module.default;
-        //     this.fetchComment();
-        // })
         this.fetchComment();
     },
     methods: {
@@ -31,13 +28,9 @@ export default {
             if (!this.show) return;
             await new Promise(res => setTimeout(res, 1000));
             const gitalk = new Gitalk({
-                clientID: '7409ea9a776d385529be',
-                clientSecret: '80513c8c974030183d29369724133e64d707c5b8',
-                repo: 'blog',
-                owner: 'chingchao',
-                admin: ['chingchao'],
+                ...valineConfig,
                 id: this.$page.key,
-                distractionFreeMode: false  // Facebook-like distraction free mode
+                distractionFreeMode: false
             });
             gitalk.render(this.$refs.commentEl);
         }

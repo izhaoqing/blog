@@ -61,7 +61,7 @@ typings/
 .next
 
 # 忽略评论组件的配置参数（appid,appkey）
-valineConfig.js
+gitalkConfig.js
 
 # 忽略草稿目录
 test/
