@@ -15,7 +15,8 @@ module.exports = {
     ],
     plugins: [
         '@vuepress/back-to-top', 
-        require('./vuepress-plugin-comment.js'),
+        // require('./plugins/vuepress-plugin-comment.js'),
+        require('./plugins/gitalk-plugin.js'),
         [
             '@vuepress/pwa', {
                 serviceWorker: true,
