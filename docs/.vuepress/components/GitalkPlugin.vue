@@ -7,7 +7,7 @@
 <script>
 import 'gitalk/dist/gitalk.css';
 import Gitalk from 'gitalk';
-const valineConfig = require('../../../valineConfig');
+const config = require('../../../gitalkConfig.js');
 
 export default {
     name: "GitalkPlugin",
@@ -28,7 +28,7 @@ export default {
             if (!this.show) return;
             await new Promise(res => setTimeout(res, 1000));
             const gitalk = new Gitalk({
-                ...valineConfig,
+                ...config,
                 id: this.$page.key,
                 distractionFreeMode: false
             });
