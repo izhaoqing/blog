@@ -58,7 +58,7 @@ git commit --amend
 
 ### Bug分支
 
-Git提供了一个`stash`功能，可以把当前工作现场“储藏”起来。
+Git提供了一个`stash`功能，可以把当前工作现场“储藏”起来。如果有新文件，需要加 `-a`，或者先 `git add .` 再使用 `stash`。
 
 ```shell
 $ git stash

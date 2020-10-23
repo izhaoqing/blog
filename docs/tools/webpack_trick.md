@@ -150,3 +150,25 @@ The solution was to change the filename depending on whether the mode is product
   filename: mode === 'production' ? '[name].[chunkhash].js' : '[name].[hash].js'
 }
 ```
+
+### 保存文件即检测
+
+在开发环境使用 webpack-dev-server 监测文件的改动，保存文件时重新打包，对 js 和 vue 文件增加 `eslint-loader` ，可以在打包文件前做代码检查。
+
+```js
+urles: [
+  {
+    // 优先处理
+    enfore: 'pre',
+    test: /\.(vue|jsx?)$/,
+    exclude: /node_modules/,
+    loader: 'eslint-loader',
+    options: {
+      // 自动修复
+      fix: true
+    }
+  }
+]
+```
+
+不过每次保存，不只是检测保存的这个文件，而是所有范围内的文件。

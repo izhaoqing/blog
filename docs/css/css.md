@@ -280,7 +280,7 @@ document.styleSheet[0].addRule('p.active', 'color: red');
 ### pointer-events 禁止鼠标事件
 
 ```css
-pointer-event: none;
+pointer-events: none;
 ```
 
 ### 禁止设置了 felx: 1 的元素被子节点撑开
