@@ -506,6 +506,16 @@ dateStr(d) {
 }
 ```
 
+## 数字的千位分隔符表示法
+
+```js
+const num = 1234567
+// 正则
+num.toString().replace(/\B(?=(\d{3})+\b)/g, ',')
+// toString
+num.toLocaleString()
+```
+
 
 
 

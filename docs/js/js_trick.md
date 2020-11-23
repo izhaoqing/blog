@@ -182,7 +182,7 @@ function strTimes (str) {
 ### 评级
 
 ```js
-"★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate);
+rate => '★★★★★☆☆☆☆☆'.slice(5 - rate, 10 - rate);
 ```
 
 ### 字符串类型的数字转数字

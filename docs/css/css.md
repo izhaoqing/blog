@@ -340,3 +340,30 @@ vertical-lr
 }
 ```
 
+### 暗色主题适配
+
+[prefers-color-scheme 媒体查询](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media/prefers-color-scheme) 可以作为判断，可能的值有三个：dark, light, no-preference。IE 不支持，其他主流浏览器支持良好。
+
+```css
+@media (prefers-color-scheme: dark) {
+  .day.dark-scheme   { background:  #333; color: white; }
+  .night.dark-scheme { background: black; color:  #ddd; }
+}
+```
+
+```js
+const darkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)'); 
+// 判断是否匹配深色模式 
+if (darkMode && darkMode.matches) { 
+  document.body.classList.add('dark'); 
+} 
+// 监听主题切换事件 
+darkMode && darkMode.addEventListener('change', e => { 
+  if (e.matches) { 
+    document.body.classList.add('dark'); 
+  } else { 
+    document.body.classList.remove('dark');  
+  } 
+});
+```
+
