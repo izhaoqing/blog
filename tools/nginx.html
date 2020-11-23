@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Nginx | Code Space</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="Vue 驱动的静态网站生成工具">
+    <meta name="referrer" content="no-referrer">
+    <link rel="preload" href="/assets/css/0.styles.36fa6605.css" as="style"><link rel="preload" href="/assets/js/app.8631f5fd.js" as="script"><link rel="preload" href="/assets/js/2.c86acf02.js" as="script"><link rel="preload" href="/assets/js/71.538da589.js" as="script"><link rel="preload" href="/assets/js/4.bb958fe5.js" as="script"><link rel="preload" href="/assets/js/5.f6b759bd.js" as="script"><link rel="prefetch" href="/assets/js/10.5229baac.js"><link rel="prefetch" href="/assets/js/100.761e5c60.js"><link rel="prefetch" href="/assets/js/101.88597a61.js"><link rel="prefetch" href="/assets/js/102.ca4e8955.js"><link rel="prefetch" href="/assets/js/103.bb0a8c5a.js"><link rel="prefetch" href="/assets/js/104.ada1ba2d.js"><link rel="prefetch" href="/assets/js/105.7dfa4fd4.js"><link rel="prefetch" href="/assets/js/106.21625ce2.js"><link rel="prefetch" href="/assets/js/107.baa3c52d.js"><link rel="prefetch" href="/assets/js/108.acf31723.js"><link rel="prefetch" href="/assets/js/109.005de5c3.js"><link rel="prefetch" href="/assets/js/11.87f6165d.js"><link rel="prefetch" href="/assets/js/110.3f7f9cc7.js"><link rel="prefetch" href="/assets/js/111.3b30a687.js"><link rel="prefetch" href="/assets/js/12.99aeb020.js"><link rel="prefetch" href="/assets/js/13.7da88f8e.js"><link rel="prefetch" href="/assets/js/14.40750b79.js"><link rel="prefetch" href="/assets/js/15.1e5ac8b5.js"><link rel="prefetch" href="/assets/js/16.67bb4a76.js"><link rel="prefetch" href="/assets/js/17.f1ab3e54.js"><link rel="prefetch" href="/assets/js/18.2d1c856d.js"><link rel="prefetch" href="/assets/js/19.7dc0e882.js"><link rel="prefetch" href="/assets/js/20.7c353ad4.js"><link rel="prefetch" href="/assets/js/21.cbb46237.js"><link rel="prefetch" href="/assets/js/22.4afaef53.js"><link rel="prefetch" href="/assets/js/23.d393b247.js"><link rel="prefetch" href="/assets/js/24.891ad824.js"><link rel="prefetch" href="/assets/js/25.276ad00a.js"><link rel="prefetch" href="/assets/js/26.fa584264.js"><link rel="prefetch" href="/assets/js/27.e4b057d9.js"><link rel="prefetch" href="/assets/js/28.5bf8f032.js"><link rel="prefetch" href="/assets/js/29.8433e072.js"><link rel="prefetch" href="/assets/js/3.d1a9f3b5.js"><link rel="prefetch" href="/assets/js/30.56b3857d.js"><link rel="prefetch" href="/assets/js/31.922fa2bc.js"><link rel="prefetch" href="/assets/js/32.9b657a86.js"><link rel="prefetch" href="/assets/js/33.e137843b.js"><link rel="prefetch" href="/assets/js/34.381ea4a1.js"><link rel="prefetch" href="/assets/js/35.316bd7fc.js"><link rel="prefetch" href="/assets/js/36.2aed7c05.js"><link rel="prefetch" href="/assets/js/37.190fa64d.js"><link rel="prefetch" href="/assets/js/38.92bab415.js"><link rel="prefetch" href="/assets/js/39.4a06e53c.js"><link rel="prefetch" href="/assets/js/40.5659e6bb.js"><link rel="prefetch" href="/assets/js/41.775301c1.js"><link rel="prefetch" href="/assets/js/42.c51af82f.js"><link rel="prefetch" href="/assets/js/43.2778dbcd.js"><link rel="prefetch" href="/assets/js/44.a273f119.js"><link rel="prefetch" href="/assets/js/45.f4601694.js"><link rel="prefetch" href="/assets/js/46.e36189eb.js"><link rel="prefetch" href="/assets/js/47.3a0a0486.js"><link rel="prefetch" href="/assets/js/48.6b96ef1f.js"><link rel="prefetch" href="/assets/js/49.eb54d0f4.js"><link rel="prefetch" href="/assets/js/50.95d30cd5.js"><link rel="prefetch" href="/assets/js/51.da5e7118.js"><link rel="prefetch" href="/assets/js/52.d51f007b.js"><link rel="prefetch" href="/assets/js/53.137ad8ee.js"><link rel="prefetch" href="/assets/js/54.961d82ab.js"><link rel="prefetch" href="/assets/js/55.fe758151.js"><link rel="prefetch" href="/assets/js/56.7553fa06.js"><link rel="prefetch" href="/assets/js/57.d7308f47.js"><link rel="prefetch" href="/assets/js/58.c46cf789.js"><link rel="prefetch" href="/assets/js/59.fd3a2e49.js"><link rel="prefetch" href="/assets/js/6.ee9b384b.js"><link rel="prefetch" href="/assets/js/60.fae54c95.js"><link rel="prefetch" href="/assets/js/61.4cfb2829.js"><link rel="prefetch" href="/assets/js/62.723d8843.js"><link rel="prefetch" href="/assets/js/63.062e167f.js"><link rel="prefetch" href="/assets/js/64.fcb3d6c5.js"><link rel="prefetch" href="/assets/js/65.b5264e60.js"><link rel="prefetch" href="/assets/js/66.43391f99.js"><link rel="prefetch" href="/assets/js/67.932a3518.js"><link rel="prefetch" href="/assets/js/68.a302fe3f.js"><link rel="prefetch" href="/assets/js/69.ceee876f.js"><link rel="prefetch" href="/assets/js/7.6d73fafa.js"><link rel="prefetch" href="/assets/js/70.d009ecd0.js"><link rel="prefetch" href="/assets/js/72.ad5dd223.js"><link rel="prefetch" href="/assets/js/73.7986e349.js"><link rel="prefetch" href="/assets/js/74.b563364b.js"><link rel="prefetch" href="/assets/js/75.ad17eb0f.js"><link rel="prefetch" href="/assets/js/76.adf491bd.js"><link rel="prefetch" href="/assets/js/77.02b519d4.js"><link rel="prefetch" href="/assets/js/78.d9ee5db7.js"><link rel="prefetch" href="/assets/js/79.eb016ca9.js"><link rel="prefetch" href="/assets/js/8.50838108.js"><link rel="prefetch" href="/assets/js/80.880d1043.js"><link rel="prefetch" href="/assets/js/81.c9d131a4.js"><link rel="prefetch" href="/assets/js/82.d9e996f2.js"><link rel="prefetch" href="/assets/js/83.599db34f.js"><link rel="prefetch" href="/assets/js/84.a271f588.js"><link rel="prefetch" href="/assets/js/85.f8fa3971.js"><link rel="prefetch" href="/assets/js/86.0d953abe.js"><link rel="prefetch" href="/assets/js/87.90895a7f.js"><link rel="prefetch" href="/assets/js/88.a9dd87d0.js"><link rel="prefetch" href="/assets/js/89.f4d474dc.js"><link rel="prefetch" href="/assets/js/9.7d75daca.js"><link rel="prefetch" href="/assets/js/90.fa728a24.js"><link rel="prefetch" href="/assets/js/91.2dbea5bb.js"><link rel="prefetch" href="/assets/js/92.390d94b5.js"><link rel="prefetch" href="/assets/js/93.8b01f9af.js"><link rel="prefetch" href="/assets/js/94.e234569d.js"><link rel="prefetch" href="/assets/js/95.d2534dfd.js"><link rel="prefetch" href="/assets/js/96.01980625.js"><link rel="prefetch" href="/assets/js/97.36578994.js"><link rel="prefetch" href="/assets/js/98.e7151c30.js"><link rel="prefetch" href="/assets/js/99.48afd786.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.36fa6605.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Code Space</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/js/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/vueCom/" class="nav-link">
+  Vue组件精讲
+</a></div><div class="nav-item"><a href="/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/tools/" class="nav-link router-link-active">
+  其他
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/miniProgram/" class="nav-link">
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/flutter/" class="nav-link">
+  Flutter
+</a></li><li class="dropdown-item"><!----> <a href="/svg/" class="nav-link">
+  SVG
+</a></li></ul></div></div> <a href="https://github.com/iamzhaoqing" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/js/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/vueCom/" class="nav-link">
+  Vue组件精讲
+</a></div><div class="nav-item"><a href="/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/tools/" class="nav-link router-link-active">
+  其他
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/miniProgram/" class="nav-link">
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/flutter/" class="nav-link">
+  Flutter
+</a></li><li class="dropdown-item"><!----> <a href="/svg/" class="nav-link">
+  SVG
+</a></li></ul></div></div> <a href="https://github.com/iamzhaoqing" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>工具</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/tools/" class="sidebar-link">目录</a></li><li><a href="/tools/debugeMobileSite.html" class="sidebar-link">移动端网页真机调试</a></li><li><a href="/tools/devTools.html" class="sidebar-link">DevTools</a></li><li><a href="/tools/gulp.html" class="sidebar-link">Gulp</a></li><li><a href="/tools/linux.html" class="sidebar-link">Linux常用命令</a></li><li><a href="/tools/mongodb.html" class="sidebar-link">mongodb</a></li><li><a href="/tools/nginx.html" class="active sidebar-link">Nginx</a></li><li><a href="/tools/npm--save-dev.html" class="sidebar-link">npm --save 和--save-dev的区别</a></li><li><a href="/tools/pre-commit-lint.html" class="sidebar-link">Git hooks with Husky</a></li><li><a href="/tools/svn.html" class="sidebar-link">SVN</a></li><li><a href="/tools/viewDocuments.html" class="sidebar-link">文档在线预览</a></li><li><a href="/tools/vscode.html" class="sidebar-link">VSCode 快捷键</a></li><li><a href="/tools/vscode-debugger.html" class="sidebar-link">vscode 调试 webpack</a></li><li><a href="/tools/webpack.html" class="sidebar-link">WebPack</a></li><li><a href="/tools/webpack_trick.html" class="sidebar-link">WebPack笔记</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="nginx"><a href="#nginx" class="header-anchor">#</a> Nginx</h1> <h3 id="替换默认-homebrew-源"><a href="#替换默认-homebrew-源" class="header-anchor">#</a> 替换默认 HomeBrew 源</h3> <p>使用阿里云的源</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 替换brew.git:</span>
+<span class="token builtin class-name">cd</span> <span class="token string">&quot;<span class="token variable"><span class="token variable">$(</span>brew --repo<span class="token variable">)</span></span>&quot;</span>
+<span class="token function">git</span> remote set-url origin https://mirrors.aliyun.com/homebrew/brew.git
+<span class="token comment"># 替换homebrew-core.git:</span>
+<span class="token builtin class-name">cd</span> <span class="token string">&quot;<span class="token variable"><span class="token variable">$(</span>brew --repo<span class="token variable">)</span></span>/Library/Taps/homebrew/homebrew-core&quot;</span>
+<span class="token function">git</span> remote set-url origin https://mirrors.aliyun.com/homebrew/homebrew-core.git
+<span class="token comment"># 应用生效</span>
+brew update
+<span class="token comment"># 替换homebrew-bottles:</span>
+<span class="token builtin class-name">echo</span> <span class="token string">'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles'</span> <span class="token operator">&gt;&gt;</span> ~/.zshrc
+<span class="token builtin class-name">source</span> ~/.zshrc
+</code></pre></div><p>使用回官方源：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 重置brew.git:</span>
+<span class="token builtin class-name">cd</span> <span class="token string">&quot;<span class="token variable"><span class="token variable">$(</span>brew --repo<span class="token variable">)</span></span>&quot;</span>
+<span class="token function">git</span> remote set-url origin https://github.com/Homebrew/brew.git
+<span class="token comment"># 重置homebrew-core.git:</span>
+<span class="token builtin class-name">cd</span> <span class="token string">&quot;<span class="token variable"><span class="token variable">$(</span>brew --repo<span class="token variable">)</span></span>/Library/Taps/homebrew/homebrew-core&quot;</span>
+<span class="token function">git</span> remote set-url origin https://github.com/Homebrew/homebrew-core.git
+
+<span class="token comment">#删除zshrc HOMEBREW_BOTTLE_DOMAIN内容</span>
+</code></pre></div><h3 id="安装-nginx"><a href="#安装-nginx" class="header-anchor">#</a> 安装 nginx</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>brew <span class="token function">install</span> nginx
+</code></pre></div><h3 id="启动-nginx"><a href="#启动-nginx" class="header-anchor">#</a> 启动 nginx</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>nginx
+brew services start nginx
+</code></pre></div><p>启动成功后，打开 http://localhost:8080</p> <h3 id="文件目录"><a href="#文件目录" class="header-anchor">#</a> 文件目录</h3> <ul><li><p>nginx安装文件目录
+/usr/local/Cellar/nginx</p></li> <li><p>nginx配置文件目录
+/usr/local/etc/nginx</p></li> <li><p>config文件目录
+/usr/local/etc/nginx/nginx.conf</p></li> <li><p>系统hosts位置
+/private/etc/hosts</p></li> <li><p>主页文件</p> <p>/usr/local/var/www</p></li></ul> <h3 id="常用命令"><a href="#常用命令" class="header-anchor">#</a> 常用命令</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>nginx  <span class="token comment">#启动nginx</span>
+nginx -V <span class="token comment">#查看版本，以及配置文件地址</span>
+nginx -v <span class="token comment">#查看版本</span>
+nginx -s reload<span class="token operator">|</span>reopen<span class="token operator">|</span>stop<span class="token operator">|</span>quit   <span class="token comment">#重新加载配置|重启|快速停止|安全关闭nginx</span>
+nginx -h <span class="token comment">#帮助</span>
+
+<span class="token function">ps</span> aux <span class="token operator">|</span> <span class="token function">grep</span> nginx <span class="token comment">#查看nginx服务</span>
+</code></pre></div><h3 id="卸载-nginx"><a href="#卸载-nginx" class="header-anchor">#</a> 卸载 nginx</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>brew uninstall nginx
+</code></pre></div><h3 id="配置文件"><a href="#配置文件" class="header-anchor">#</a> 配置文件</h3> <p>/usr/local/etc/nginx/nginx.conf 文件是Nginx总配置文件:</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#运行用户，默认即是nginx，可以不进行设置</span>
+user  nginx<span class="token punctuation">;</span>
+<span class="token comment">#Nginx进程，一般设置为和CPU核数一样</span>
+worker_processes  <span class="token number">1</span><span class="token punctuation">;</span>   
+<span class="token comment">#错误日志存放目录</span>
+error_log  /var/log/nginx/error.log warn<span class="token punctuation">;</span>
+<span class="token comment">#进程pid存放位置</span>
+pid        /var/run/nginx.pid<span class="token punctuation">;</span>
+
+
+events <span class="token punctuation">{</span>
+    worker_connections  <span class="token number">1024</span><span class="token punctuation">;</span> <span class="token comment"># 单个后台进程的最大并发数</span>
+<span class="token punctuation">}</span>
+
+
+http <span class="token punctuation">{</span>
+    include       /etc/nginx/mime.types<span class="token punctuation">;</span>   <span class="token comment">#文件扩展名与类型映射表</span>
+    default_type  application/octet-stream<span class="token punctuation">;</span>  <span class="token comment">#默认文件类型</span>
+    <span class="token comment">#设置日志模式</span>
+    log_format  main  <span class="token string">'<span class="token variable">$remote_addr</span> - <span class="token variable">$remote_user</span> [<span class="token variable">$time_local</span>] &quot;<span class="token variable">$request</span>&quot; '</span>
+                      <span class="token string">'<span class="token variable">$status</span> <span class="token variable">$body_bytes_sent</span> &quot;<span class="token variable">$http_referer</span>&quot; '</span>
+                      <span class="token string">'&quot;<span class="token variable">$http_user_agent</span>&quot; &quot;<span class="token variable">$http_x_forwarded_for</span>&quot;'</span><span class="token punctuation">;</span>
+
+    access_log  /var/log/nginx/access.log  main<span class="token punctuation">;</span>   <span class="token comment">#nginx访问日志存放位置</span>
+
+    sendfile        on<span class="token punctuation">;</span>   <span class="token comment">#开启高效传输模式</span>
+    <span class="token comment">#tcp_nopush     on;    #减少网络报文段的数量</span>
+
+    keepalive_timeout  <span class="token number">65</span><span class="token punctuation">;</span>  <span class="token comment">#保持连接的时间，也叫超时时间</span>
+
+    <span class="token comment">#gzip  on;  #开启gzip压缩</span>
+
+    include /etc/nginx/conf.d/*.conf<span class="token punctuation">;</span> <span class="token comment">#包含的子配置项位置和文件</span>
+</code></pre></div><p>/usr/local/etc/nginx/nginx.conf.default 是一个子文件的配置项:</p> <div class="language-bash extra-class"><pre class="language-bash"><code>server <span class="token punctuation">{</span>
+    listen       <span class="token number">80</span><span class="token punctuation">;</span>   <span class="token comment">#配置监听端口</span>
+    server_name  localhost<span class="token punctuation">;</span>  //配置域名
+
+    <span class="token comment">#charset koi8-r;     </span>
+    <span class="token comment">#access_log  /var/log/nginx/host.access.log  main;</span>
+
+    location / <span class="token punctuation">{</span>
+        root   /usr/share/nginx/html<span class="token punctuation">;</span>     <span class="token comment">#服务默认启动目录</span>
+        index  index.html index.htm<span class="token punctuation">;</span>    <span class="token comment">#默认访问文件</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">#error_page  404              /404.html;   # 配置404页面</span>
+
+    <span class="token comment"># redirect server error pages to the static page /50x.html</span>
+    <span class="token comment">#</span>
+    error_page   <span class="token number">500</span> <span class="token number">502</span> <span class="token number">503</span> <span class="token number">504</span>  /50x.html<span class="token punctuation">;</span>   <span class="token comment">#错误状态码的显示页面，配置后需要重启</span>
+    location <span class="token operator">=</span> /50x.html <span class="token punctuation">{</span>
+        root   /usr/share/nginx/html<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment"># proxy the PHP scripts to Apache listening on 127.0.0.1:80</span>
+    <span class="token comment">#</span>
+    <span class="token comment">#location ~ \.php$ {</span>
+    <span class="token comment">#    proxy_pass   http://127.0.0.1;</span>
+    <span class="token comment">#}</span>
+
+    <span class="token comment"># pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000</span>
+    <span class="token comment">#</span>
+    <span class="token comment">#location ~ \.php$ {</span>
+    <span class="token comment">#    root           html;</span>
+    <span class="token comment">#    fastcgi_pass   127.0.0.1:9000;</span>
+    <span class="token comment">#    fastcgi_index  index.php;</span>
+    <span class="token comment">#    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;</span>
+    <span class="token comment">#    include        fastcgi_params;</span>
+    <span class="token comment">#}</span>
+
+    <span class="token comment"># deny access to .htaccess files, if Apache's document root</span>
+    <span class="token comment"># concurs with nginx's one</span>
+    <span class="token comment">#</span>
+    <span class="token comment">#location ~ /\.ht {</span>
+    <span class="token comment">#    deny  all;</span>
+    <span class="token comment">#}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="修改端口"><a href="#修改端口" class="header-anchor">#</a> 修改端口</h3> <p>修改 <code>/usr/local/etc/nginx/nginx.conf</code></p> <div class="language-bash extra-class"><pre class="language-bash"><code>http <span class="token punctuation">{</span>
+    server <span class="token punctuation">{</span>
+        listen       <span class="token number">8181</span><span class="token punctuation">;</span>
+        server_name  localhost<span class="token punctuation">;</span>  
+
+        <span class="token comment">#charset koi8-r;</span>
+        <span class="token punctuation">..</span><span class="token punctuation">..</span>.
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="配置-404-页面"><a href="#配置-404-页面" class="header-anchor">#</a> 配置 404 页面</h3> <p>修改配置:</p> <div class="language-bash extra-class"><pre class="language-bash"><code>error_page <span class="token number">404</span>  /404.html<span class="token punctuation">;</span>
+error_page <span class="token number">404</span>  http://baidu.com<span class="token punctuation">;</span> <span class="token comment">#使用外部页面</span>
+</code></pre></div><p>在 <code>usr/local/var/www/</code> 下新增 404.html</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="访问控制"><a href="#访问控制" class="header-anchor">#</a> 访问控制</h3> <p>服务器只允许特定主机访问。可以在 <code>location</code> 里配置。<code>deny</code> 表示禁止，<code>allow</code> 表示允许。在同一个块下的权限指令，匹配到就不会再继续匹配下一条规则了。</p> <div class="language-shell extra-class"><pre class="language-shell"><code>location / <span class="token punctuation">{</span>
+    deny <span class="token number">123.4</span>.32.3<span class="token punctuation">;</span>
+    allow <span class="token number">35.33</span>.202.3<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>网站下的 img 可以被所有用户访问，但 admin 目录则只允许公司内部固定IP访问，需要 <code>location</code> 块来完成相关的需求匹配。</p> <div class="language-shell extra-class"><pre class="language-shell"><code>location <span class="token operator">=</span> /img <span class="token punctuation">{</span>
+    allow all
+<span class="token punctuation">}</span>
+location <span class="token operator">=</span> /admin <span class="token punctuation">{</span>
+    deny all<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>=</code>号代表精确匹配，使用了<code>=</code>后是根据其后的模式进行精确匹配。也使用正则表达式设置访问权限。</p> <div class="language-shell extra-class"><pre class="language-shell"><code>location ~<span class="token punctuation">\</span>.php$ <span class="token punctuation">{</span>
+    deny all<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="设置虚拟主机"><a href="#设置虚拟主机" class="header-anchor">#</a> 设置虚拟主机</h3> <p>虚拟主机是指在一台物理主机服务器上划分出多个磁盘空间，每个磁盘空间都是一个虚拟主机，每台虚拟主机都可以对外提供Web服务，并且互不干扰。配置虚拟主机可以基于端口号、基于IP和基于域名。</p> <p><strong>基于端口号</strong>来配置虚拟主机，原理是 Nginx 监听多个端口，根据不同的端口号，来区分不同的网站。</p> <p>在配置文件夹下新建一个配置文件 <code>8001.conf</code> ，作为子配置文件：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>server<span class="token punctuation">{</span>
+    listen <span class="token number">8001</span><span class="token punctuation">;</span>
+    server_name localhost<span class="token punctuation">;</span>
+    root /usr/local/var/www/html8001<span class="token punctuation">;</span>
+    index index.html<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment"># 监听 8001 端口，跟目录在 /usr/local/var/www/html8001 文件夹下，首页是 index.html</span>
+</code></pre></div><p><strong>基于IP</strong>和基于端口的配置几乎一样，只是把<code>server_name</code>选项，配置成IP就可以了。</p> <div class="language-shell extra-class"><pre class="language-shell"><code>server<span class="token punctuation">{</span>
+    listen <span class="token number">80</span><span class="token punctuation">;</span>
+    server_name <span class="token number">112.74</span>.164.244<span class="token punctuation">;</span>
+    root /usr/local/var/www/html8001<span class="token punctuation">;</span>
+    index index.html<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>基于域名</strong>配置虚拟主机，把<code>server_name</code>选项，配置成域名就可以了。</p> <div class="language-shell extra-class"><pre class="language-shell"><code>server<span class="token punctuation">{</span>
+    listen <span class="token number">80</span><span class="token punctuation">;</span>
+    server_name zq.com<span class="token punctuation">;</span>
+    root /usr/local/var/www/html8001<span class="token punctuation">;</span>
+    index index.html<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="反向代理"><a href="#反向代理" class="header-anchor">#</a> 反向代理</h3> <p>客户端发送的请求，内容被发送到代理服务器上，这个代理服务器再把请求发送到自己设置好的内部服务器上，而用户真实想获得的内容就在这些设置好的服务器上。代理服务器向外部客户端提供了一个统一的代理入口，客户端的请求都要先经过这个代理服务器。具体访问那个服务器是由 Nginx 来控制的。再简单点来讲，一般代理指代理的客户端，反向代理是代理的服务器。</p> <p>使用反向代理用户只能通过外来网来访问代理服务器，并且用户并不知道自己访问的真实服务器是那一台，可以很好的提供安全保护。反向代理的主要用途是实现服务器压力的平均分配，为多个服务器提供负债均衡、缓存等功能。</p> <div class="language-shell extra-class"><pre class="language-shell"><code>server<span class="token punctuation">{</span>
+        listen <span class="token number">80</span><span class="token punctuation">;</span>
+        server_name nginx.a.com<span class="token punctuation">;</span>
+        location / <span class="token punctuation">{</span>
+               proxy_pass http://a.com<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment"># 将 nginx.a.com 代理到 a.com</span>
+</code></pre></div><p>反向代理还有些常用的指令：</p> <ul><li>proxy_set_header :在将客户端请求发送给后端服务器之前，更改来自客户端的请求头信息。</li> <li>proxy_connect_timeout:配置Nginx与后端代理服务器尝试建立连接的超时时间。</li> <li>proxy_read_timeout : 配置Nginx向后端服务器组发出read请求后，等待相应的超时时间。</li> <li>proxy_send_timeout：配置Nginx向后端服务器组发出write请求后，等待相应的超时时间。</li> <li>proxy_redirect :用于修改后端服务器返回的响应头中的Location和Refresh。</li></ul> <h3 id="适配pc端和移动端"><a href="#适配pc端和移动端" class="header-anchor">#</a> 适配pc端和移动端</h3> <p>Nginx通过内置变量 <code>$http_user_agent</code>，可以获取到请求客户端的 userAgent，就可以用户目前处于移动端还是PC端，进而展示不同的页面给用户。</p> <div class="language-shell extra-class"><pre class="language-shell"><code>server<span class="token punctuation">{</span>
+    listen <span class="token number">80</span><span class="token punctuation">;</span>
+    server_name nginx2.jspang.com<span class="token punctuation">;</span>
+    location / <span class="token punctuation">{</span>
+        root /usr/share/nginx/pc<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$http_user_agent</span> ~* <span class="token string">'(Android|webOS|iPhone|iPod|BlackBerry)'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            root /usr/share/nginx/mobile<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        index index.html<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com//iamzhaoqing/blog/edit/master/docs/tools/nginx.md" target="_blank" rel="noopener noreferrer">编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">9/22/2019, 7:14:51 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/tools/mongodb.html" class="prev">
+        mongodb
+      </a></span> <span class="next"><a href="/tools/npm--save-dev.html">
+        npm --save 和--save-dev的区别
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----><!----></div></div>
+    <script src="/assets/js/app.8631f5fd.js" defer></script><script src="/assets/js/2.c86acf02.js" defer></script><script src="/assets/js/71.538da589.js" defer></script><script src="/assets/js/4.bb958fe5.js" defer></script><script src="/assets/js/5.f6b759bd.js" defer></script>
+  </body>
+</html>

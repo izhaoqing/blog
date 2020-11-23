@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git hooks with Husky | Code Space</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="Vue 驱动的静态网站生成工具">
+    <meta name="referrer" content="no-referrer">
+    <link rel="preload" href="/assets/css/0.styles.36fa6605.css" as="style"><link rel="preload" href="/assets/js/app.8631f5fd.js" as="script"><link rel="preload" href="/assets/js/2.c86acf02.js" as="script"><link rel="preload" href="/assets/js/73.7986e349.js" as="script"><link rel="preload" href="/assets/js/4.bb958fe5.js" as="script"><link rel="preload" href="/assets/js/5.f6b759bd.js" as="script"><link rel="prefetch" href="/assets/js/10.5229baac.js"><link rel="prefetch" href="/assets/js/100.761e5c60.js"><link rel="prefetch" href="/assets/js/101.88597a61.js"><link rel="prefetch" href="/assets/js/102.ca4e8955.js"><link rel="prefetch" href="/assets/js/103.bb0a8c5a.js"><link rel="prefetch" href="/assets/js/104.ada1ba2d.js"><link rel="prefetch" href="/assets/js/105.7dfa4fd4.js"><link rel="prefetch" href="/assets/js/106.21625ce2.js"><link rel="prefetch" href="/assets/js/107.baa3c52d.js"><link rel="prefetch" href="/assets/js/108.acf31723.js"><link rel="prefetch" href="/assets/js/109.005de5c3.js"><link rel="prefetch" href="/assets/js/11.87f6165d.js"><link rel="prefetch" href="/assets/js/110.3f7f9cc7.js"><link rel="prefetch" href="/assets/js/111.3b30a687.js"><link rel="prefetch" href="/assets/js/12.99aeb020.js"><link rel="prefetch" href="/assets/js/13.7da88f8e.js"><link rel="prefetch" href="/assets/js/14.40750b79.js"><link rel="prefetch" href="/assets/js/15.1e5ac8b5.js"><link rel="prefetch" href="/assets/js/16.67bb4a76.js"><link rel="prefetch" href="/assets/js/17.f1ab3e54.js"><link rel="prefetch" href="/assets/js/18.2d1c856d.js"><link rel="prefetch" href="/assets/js/19.7dc0e882.js"><link rel="prefetch" href="/assets/js/20.7c353ad4.js"><link rel="prefetch" href="/assets/js/21.cbb46237.js"><link rel="prefetch" href="/assets/js/22.4afaef53.js"><link rel="prefetch" href="/assets/js/23.d393b247.js"><link rel="prefetch" href="/assets/js/24.891ad824.js"><link rel="prefetch" href="/assets/js/25.276ad00a.js"><link rel="prefetch" href="/assets/js/26.fa584264.js"><link rel="prefetch" href="/assets/js/27.e4b057d9.js"><link rel="prefetch" href="/assets/js/28.5bf8f032.js"><link rel="prefetch" href="/assets/js/29.8433e072.js"><link rel="prefetch" href="/assets/js/3.d1a9f3b5.js"><link rel="prefetch" href="/assets/js/30.56b3857d.js"><link rel="prefetch" href="/assets/js/31.922fa2bc.js"><link rel="prefetch" href="/assets/js/32.9b657a86.js"><link rel="prefetch" href="/assets/js/33.e137843b.js"><link rel="prefetch" href="/assets/js/34.381ea4a1.js"><link rel="prefetch" href="/assets/js/35.316bd7fc.js"><link rel="prefetch" href="/assets/js/36.2aed7c05.js"><link rel="prefetch" href="/assets/js/37.190fa64d.js"><link rel="prefetch" href="/assets/js/38.92bab415.js"><link rel="prefetch" href="/assets/js/39.4a06e53c.js"><link rel="prefetch" href="/assets/js/40.5659e6bb.js"><link rel="prefetch" href="/assets/js/41.775301c1.js"><link rel="prefetch" href="/assets/js/42.c51af82f.js"><link rel="prefetch" href="/assets/js/43.2778dbcd.js"><link rel="prefetch" href="/assets/js/44.a273f119.js"><link rel="prefetch" href="/assets/js/45.f4601694.js"><link rel="prefetch" href="/assets/js/46.e36189eb.js"><link rel="prefetch" href="/assets/js/47.3a0a0486.js"><link rel="prefetch" href="/assets/js/48.6b96ef1f.js"><link rel="prefetch" href="/assets/js/49.eb54d0f4.js"><link rel="prefetch" href="/assets/js/50.95d30cd5.js"><link rel="prefetch" href="/assets/js/51.da5e7118.js"><link rel="prefetch" href="/assets/js/52.d51f007b.js"><link rel="prefetch" href="/assets/js/53.137ad8ee.js"><link rel="prefetch" href="/assets/js/54.961d82ab.js"><link rel="prefetch" href="/assets/js/55.fe758151.js"><link rel="prefetch" href="/assets/js/56.7553fa06.js"><link rel="prefetch" href="/assets/js/57.d7308f47.js"><link rel="prefetch" href="/assets/js/58.c46cf789.js"><link rel="prefetch" href="/assets/js/59.fd3a2e49.js"><link rel="prefetch" href="/assets/js/6.ee9b384b.js"><link rel="prefetch" href="/assets/js/60.fae54c95.js"><link rel="prefetch" href="/assets/js/61.4cfb2829.js"><link rel="prefetch" href="/assets/js/62.723d8843.js"><link rel="prefetch" href="/assets/js/63.062e167f.js"><link rel="prefetch" href="/assets/js/64.fcb3d6c5.js"><link rel="prefetch" href="/assets/js/65.b5264e60.js"><link rel="prefetch" href="/assets/js/66.43391f99.js"><link rel="prefetch" href="/assets/js/67.932a3518.js"><link rel="prefetch" href="/assets/js/68.a302fe3f.js"><link rel="prefetch" href="/assets/js/69.ceee876f.js"><link rel="prefetch" href="/assets/js/7.6d73fafa.js"><link rel="prefetch" href="/assets/js/70.d009ecd0.js"><link rel="prefetch" href="/assets/js/71.538da589.js"><link rel="prefetch" href="/assets/js/72.ad5dd223.js"><link rel="prefetch" href="/assets/js/74.b563364b.js"><link rel="prefetch" href="/assets/js/75.ad17eb0f.js"><link rel="prefetch" href="/assets/js/76.adf491bd.js"><link rel="prefetch" href="/assets/js/77.02b519d4.js"><link rel="prefetch" href="/assets/js/78.d9ee5db7.js"><link rel="prefetch" href="/assets/js/79.eb016ca9.js"><link rel="prefetch" href="/assets/js/8.50838108.js"><link rel="prefetch" href="/assets/js/80.880d1043.js"><link rel="prefetch" href="/assets/js/81.c9d131a4.js"><link rel="prefetch" href="/assets/js/82.d9e996f2.js"><link rel="prefetch" href="/assets/js/83.599db34f.js"><link rel="prefetch" href="/assets/js/84.a271f588.js"><link rel="prefetch" href="/assets/js/85.f8fa3971.js"><link rel="prefetch" href="/assets/js/86.0d953abe.js"><link rel="prefetch" href="/assets/js/87.90895a7f.js"><link rel="prefetch" href="/assets/js/88.a9dd87d0.js"><link rel="prefetch" href="/assets/js/89.f4d474dc.js"><link rel="prefetch" href="/assets/js/9.7d75daca.js"><link rel="prefetch" href="/assets/js/90.fa728a24.js"><link rel="prefetch" href="/assets/js/91.2dbea5bb.js"><link rel="prefetch" href="/assets/js/92.390d94b5.js"><link rel="prefetch" href="/assets/js/93.8b01f9af.js"><link rel="prefetch" href="/assets/js/94.e234569d.js"><link rel="prefetch" href="/assets/js/95.d2534dfd.js"><link rel="prefetch" href="/assets/js/96.01980625.js"><link rel="prefetch" href="/assets/js/97.36578994.js"><link rel="prefetch" href="/assets/js/98.e7151c30.js"><link rel="prefetch" href="/assets/js/99.48afd786.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.36fa6605.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Code Space</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/js/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/vueCom/" class="nav-link">
+  Vue组件精讲
+</a></div><div class="nav-item"><a href="/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/tools/" class="nav-link router-link-active">
+  其他
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/miniProgram/" class="nav-link">
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/flutter/" class="nav-link">
+  Flutter
+</a></li><li class="dropdown-item"><!----> <a href="/svg/" class="nav-link">
+  SVG
+</a></li></ul></div></div> <a href="https://github.com/iamzhaoqing" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/js/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/vueCom/" class="nav-link">
+  Vue组件精讲
+</a></div><div class="nav-item"><a href="/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/tools/" class="nav-link router-link-active">
+  其他
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/miniProgram/" class="nav-link">
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/flutter/" class="nav-link">
+  Flutter
+</a></li><li class="dropdown-item"><!----> <a href="/svg/" class="nav-link">
+  SVG
+</a></li></ul></div></div> <a href="https://github.com/iamzhaoqing" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>工具</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/tools/" class="sidebar-link">目录</a></li><li><a href="/tools/debugeMobileSite.html" class="sidebar-link">移动端网页真机调试</a></li><li><a href="/tools/devTools.html" class="sidebar-link">DevTools</a></li><li><a href="/tools/gulp.html" class="sidebar-link">Gulp</a></li><li><a href="/tools/linux.html" class="sidebar-link">Linux常用命令</a></li><li><a href="/tools/mongodb.html" class="sidebar-link">mongodb</a></li><li><a href="/tools/nginx.html" class="sidebar-link">Nginx</a></li><li><a href="/tools/npm--save-dev.html" class="sidebar-link">npm --save 和--save-dev的区别</a></li><li><a href="/tools/pre-commit-lint.html" class="active sidebar-link">Git hooks with Husky</a></li><li><a href="/tools/svn.html" class="sidebar-link">SVN</a></li><li><a href="/tools/viewDocuments.html" class="sidebar-link">文档在线预览</a></li><li><a href="/tools/vscode.html" class="sidebar-link">VSCode 快捷键</a></li><li><a href="/tools/vscode-debugger.html" class="sidebar-link">vscode 调试 webpack</a></li><li><a href="/tools/webpack.html" class="sidebar-link">WebPack</a></li><li><a href="/tools/webpack_trick.html" class="sidebar-link">WebPack笔记</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="git-hooks-with-husky"><a href="#git-hooks-with-husky" class="header-anchor">#</a> Git hooks with Husky</h1> <p>提交代码（commit）前做 ESLint 检查，可以使用 git 的钩子（pre-commit）执行 ESLint 命令，每一个 git 项目在 .git/hook 文件夹下存在许多可执行文件，找到 pre-commit 文件，修改内容即可。默认的文件名可能是 pre-commit.sample，需要修改文件名。</p> <p>直接修改 git 钩子文件只会在本地起作用，不能提交到远程仓库，更简单的方法是使用 <a href="https://github.com/typicode/husky#readme" target="_blank" rel="noopener noreferrer">husky<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 。安装后在 package.json 中增加配置，或者新建一个单独的配置文件。</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">npm</span> <span class="token function">install</span> husky -D
+</code></pre></div><div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;script&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;serve&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vue-cli-service serve&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;lint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vue-cli-service lint --quiet&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vue-cli-service build --mode fordev&quot;</span>
+  <span class="token punctuation">}</span>
+  <span class="token property">&quot;husky&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;hooks&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;pre-commit&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vue-cli-service lint&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>每次运行 <code>git commit</code>会先执行 <code>npm run lint</code> ，如果有 error，commit 操作就不会执行。这样可以避免提交有问题的代码。例如开发时使用 console，ESLint 配置文件设置规则是 <code>&quot;no-console&quot;: 0</code>，为了防止提交代码前忘记删除，就需要再做一次代码检测，而且还需要给 ESLint 增加一个额外的配置文件，包含<code>&quot;no-console&quot;: 2</code> 的规则。额外指定的配置文件优先级更高。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// .ESLintrc-pre-commit.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  rules<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;no-console&quot;</span><span class="token operator">:</span> <span class="token number">2</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>修改 package.json 文件：</p> <div class="language-diff extra-class"><pre class="language-diff"><code><span class="token deleted-sign deleted">-- &quot;pre-commit&quot;: &quot;vue-cli-service lint&quot;
+</span><span class="token inserted-sign inserted">++ &quot;pre-commit&quot;: &quot;vue-cli-service lint -c ./.ESLintrc-pre-commit.js&quot;
+</span></code></pre></div><p>此时 ESLint 检测范围是整个项目，使用 <a href="https://github.com/okonet/lint-staged" target="_blank" rel="noopener noreferrer">lint-staged<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 工具可以将范围缩小至需要提交的文件（staged files）速度更快。安装后修改 package.json 文件：</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">npm</span> <span class="token function">install</span> lint-staged -D
+</code></pre></div><div class="language-diff extra-class"><pre class="language-diff"><code><span class="token unchanged">   &quot;husky&quot;: {
+     &quot;hook&quot;: {
+</span><span class="token deleted-sign deleted">--     &quot;pre-commit&quot;: &quot;vue-cli-service lint -c ./.eslintrc-pre-commit.js&quot;
+</span><span class="token inserted-sign inserted">++     &quot;pre-commit&quot;: &quot;lint-staged&quot;
+</span><span class="token unchanged">     }
+   },
+</span><span class="token inserted-sign inserted">++ &quot;lint-staged&quot;: {
+++   &quot;*.{js,vue}&quot;: [
+++     &quot;vue-cli-service lint --c ./.eslintrc-pre-commit.js&quot;
+++   ]
+++ }
+</span></code></pre></div><p>加上 <code>--fix</code> 会自动修复。</p> <div class="language-diff extra-class"><pre class="language-diff"><code><span class="token coord">--- &quot;vue-cli-service lint --c ./.eslintrc-pre-commit.js&quot;</span>
+<span class="token coord">+++ &quot;vue-cli-service lint --c ./.eslintrc-pre-commit.js --fix&quot;</span>
+</code></pre></div><blockquote><ol><li>vue 项目可以使用 <a href="https://cli.vuejs.org/guide/cli-service.html#git-hooks" target="_blank" rel="noopener noreferrer">gitHooks<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</li> <li>husky 要求 node 版本 &gt;= 10，Git 版本 &gt;= 2.13.0。</li> <li>安装 husky 会自动修改 git 钩子文件，使用 cnpm 可能会导致使用时 ESLint 命令不执行。</li></ol></blockquote></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com//iamzhaoqing/blog/edit/master/docs/tools/pre-commit-lint.md" target="_blank" rel="noopener noreferrer">编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">7/21/2020, 2:21:34 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/tools/npm--save-dev.html" class="prev">
+        npm --save 和--save-dev的区别
+      </a></span> <span class="next"><a href="/tools/svn.html">
+        SVN
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----><!----></div></div>
+    <script src="/assets/js/app.8631f5fd.js" defer></script><script src="/assets/js/2.c86acf02.js" defer></script><script src="/assets/js/73.7986e349.js" defer></script><script src="/assets/js/4.bb958fe5.js" defer></script><script src="/assets/js/5.f6b759bd.js" defer></script>
+  </body>
+</html>
