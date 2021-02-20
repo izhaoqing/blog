@@ -107,7 +107,7 @@ $ git stash apply stash@{0}
 ```shell
 $ git branch
 $ git branch -a  # 查看本地和远程所有分支
-$ git fetch  # 远程有新的分支，git branch -a 也查看不到，需要先拉取
+$ git remote update origin --prune # 从远程更新本地分支列表
 ```
 
 ### 新建分支

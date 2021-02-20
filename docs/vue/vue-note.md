@@ -727,9 +727,17 @@ data: vm => ({ a: vm.myProp })
 </script>
 ```
 
+### 热更新的规则
 
+Below are the state preservation rules in hot reloading.
 
+1. When editing the `<template>` of a component, instances of the edited component will re-render in place, preserving all current private state.
+2. When editing the `<script>` part of a component, instances of the edited component will be destroyed and re-created in place.
+3. When editing the `<style>` hot reload operates on its own via vue-style-loader without affecting application state.
 
+###单文件组件自定义块
+
+在 `.vue` 文件中可以使用自定义语言块。[Vue Loader 自定义块](https://vue-loader.vuejs.org/zh/guide/custom-blocks.html)
 
 
 

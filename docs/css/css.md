@@ -291,7 +291,10 @@ pointer-events: none;
 }
 .child {
   flex: 1;
+  /* 设置宽度为0在 Chrome 中有效，Firefox 中无效 */
   width: 0;
+  /* 在 Chrome 和 Firefox 中都有效 */
+  overflow: hidden;
 }
 ```
 

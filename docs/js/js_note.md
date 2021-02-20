@@ -368,7 +368,7 @@ position是相对于元素的位置，并且必须是以下字符串之一：
 
 - 'afterbegin'
 
-  `插入元素内部的第一个子节点之前。`
+  插入元素内部的第一个子节点之前。
 
 - 'beforeend'
 
@@ -516,9 +516,43 @@ num.toString().replace(/\B(?=(\d{3})+\b)/g, ',')
 num.toLocaleString()
 ```
 
+## forEach 和 for-in 遍历顺序
 
+forEach 会按照索引升序遍历 [forEach 规范](http://ecma-international.org/ecma-262/5.1/#sec-15.4.4.18)。for-in 先是按照从大到小的顺序遍历数字的 key，再按照创建顺序遍历字符串 key。（规范里说枚举顺序没有指定）[for-in](http://ecma-international.org/ecma-262/5.1/#sec-12.6.4)
 
+## JS 打开新标签页被拦截
 
+用 js 打开新的标签页有多种方法，最简单的是 `window.open()`，不过在异步回调函数里调用 open 方法可能会被浏览器拦截，Chrome 可以设置是否阻止弹出式窗口。
+
+```js
+fetch('api').then(data => window.open(data.url))
+```
+
+用 js 触发 a 标签跳转也会被阻止。
+
+```js
+const a = document.createElement('a')
+a.href = 'url'
+a.target = '_blank'
+a.click()
+```
+
+## axios 下载文件
+
+```js
+axios.get('url', {
+  responseType: 'blob'
+}).then(res => {
+  const downloadUrl = window.URL.createObjectURL(new Blob([res.data]));
+  const link = document.createElement('a');
+  link.href = downloadUrl;
+  link.style.display = 'none';
+  link.setAttribute('download', 'file.zip');
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+})
+```
 
 
 

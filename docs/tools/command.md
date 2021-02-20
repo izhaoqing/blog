@@ -1,4 +1,4 @@
-# Linux常用命令
+# 命令行使用
 
 ###  端口被占用
 
@@ -14,49 +14,24 @@ $ sudo -s lsof -i tcp:8887
 $ kill 22995
 ```
 
-### 查看路径
-
-```shell
-$ pwd
-```
-
-### node升级
-
-```shell
-$ npm install -g n
-$ n stable # 升级到最新版
-$ n v4.4.7 # 升级到指定版本
-```
-
 ### node 版本控制
 
-
+[nvm](https://github.com/nvm-sh/nvm)
 
 ### npm
 
 ```shell
 $ npm -v          #显示版本，检查npm 是否正确安装。
- 
 $ npm install express   #安装express模块
- 
 $ npm install -g express  #全局安装express模块
- 
-$ npm list         #列出已安装模块
-
+$ npm list         #列出已安装模
 $ npm list -g --depth 0 # 显示已安装的包
- 
 $ npm show express     #显示模块详情
- 
 $ npm update        #升级当前目录下的项目的所有模块
- 
 $ npm update express    #升级当前目录下的项目的指定模块
- 
 $ npm update -g express  #升级全局安装的express模块
- 
 $ npm uninstall express  #删除指定的模块
-
 $ npm cache clean  #清除缓存
-
 ```
 
 ### npm 源 (nrm)
@@ -85,6 +60,7 @@ $ npm config get registry
 $ mv docs blog #重命名
 $ touch config.js #新建文件
 $ mkdir dir && cd $_ #创建并进入文件夹
+$ pwd #查看路径
 ```
 
 ### 启动 mongodb
@@ -122,4 +98,19 @@ if (process.platform === 'win32') {
 | ctrl-e        | 将光标移至行尾                 |
 | ctrl-k        | 删除光标至行尾的所有内容       |
 | ctrl-l        | 清屏                           |
+
+### 命令行语法格式
+
+| 符号               | 描述                           |
+| :----------------- | :----------------------------- |
+| 没有括号的文本     | 必须按照显示的输入             |
+| `<尖括号内的文本>` | 必填值的占位符                 |
+| `[方括号内的文本]` | 可选项                         |
+| `{大括号内的文本}` | 一组必填项，必须选择一个       |
+| 竖线 `(|)`         | 分隔多个互斥的项，必须选择一个 |
+| 省略号 `(…)`       | 可以分开的项目并使用多次       |
+
+> Command-line syntax key [https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/command-line-syntax-key](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/command-line-syntax-key) 
+>
+> docopt.org [http://docopt.org/](http://docopt.org/)
 
