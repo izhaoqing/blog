@@ -380,13 +380,56 @@ git commit -m 'delete files'
 
 [Unable to connect to git remote repository](https://stackoverflow.com/questions/24543372/unable-to-connect-to-git-remote-repository)
 
+## 代理
+
+**HTTP 代理**
+
+```shell
+git config --global https.proxy http://127.0.0.1:1080
+git config --global https.proxy https://127.0.0.1:1080
+```
+
+**取消 HTTP 代理**
+
+```shell
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```
+
+**SSH 代理**
+
+对 macOS 用户，你可以使用 [`connect`](https://bitbucket.org/gotoh/connect/wiki/Home)，这是一个让 SSH 支持 SOCKS/HTTPS 代理的工具，这里我们用 [homebrew](https://brew.sh/) 来安装:
+
+```bash
+brew install connect
+```
+
+然后编辑你的 `~/.ssh/config` 文件，加入以下代码:
+
+```git
+Host *
+  User git
+  ProxyCommand connect -S 127.0.0.1:1086 %h %p
+```
+
+ssh 代理可能会有问题：
+
+```shell
+packet_write_wait: Connection to UNKNOWN port 65535: Broken pipe  
+fatal: the remote end hung up unexpectedly
+fatal: early EOF
+fatal: index-pack failed
+```
+
+可以通过在命令行里输入 `set system offload ipv4 forwarding disable` 解决。
+
 ## 参考
 
 [易百教程-Git](https://www.yiibai.com/git)  
 
 [廖雪峰Git教程](https://www.liaoxuefeng.com/wiki/896043488029600)
 
-
+[git 代理设置](https://egoist.moe/git-is-slow)
 
 
 
